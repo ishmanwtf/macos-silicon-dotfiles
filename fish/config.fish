@@ -36,6 +36,7 @@ function greeting
     set_color -o EEA9A9; date +%T; set_color normal
 end
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    eval (/opt/homebrew/bin/brew shellenv)
 end
+
 starship init fish | source

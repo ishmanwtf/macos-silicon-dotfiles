@@ -1,15 +1,15 @@
 ############## BAR ##############
-sketchybar --bar height=46 \
-      y_offset=6 \
-      blur_radius=10 \
+sketchybar --bar height=30 \
+      y_offset=0 \
+      blur_radius=9 \
       position=left \
-      padding_left=4 \
-      padding_right=4 \
-      margin=6 \
-      corner_radius=12 \
+      padding_left=8 \
+      padding_right=8 \
+      margin=0 \
+      corner_radius=9 \
       color=0xDD1F2431 \
       shadow=off \
-      border_width=1 \
+      border_width=0 \
       border_color=0x881A1B26
 
 ############## GLOBAL DEFAULTS ##############
@@ -18,7 +18,7 @@ sketchybar --default updates=when_shown \
       icon.color=0xffCAD3F5 \
       icon.highlight_color=0xff728FCB \
       label.color=0xffCAD3F5 \
-      background.corner_radius=5 background.height=40
+      background.corner_radius=9 background.height=40
 
 SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
 SPACES=()
@@ -29,32 +29,32 @@ for i in "${!SPACE_ICONS[@]}"; do
       sketchybar --add space space.$sid center \
             --set space.$sid associated_space=$sid \
             icon=${SPACE_ICONS[i]} \
-            icon.font="SF Pro:bold:17.0" \
-            icon.padding_left=12 \
-            icon.padding_right=12 \
+            icon.font="SF Pro:bold:13.0" \
+            icon.padding_left=0 \
+            icon.padding_right=0 \
             icon.highlight_color=0xffE48FA8 \
-            background.padding_left=-3 \
-            background.padding_right=-3 \
+            background.padding_left=0 \
+            background.padding_right=0 \
             background.color=0x003C3E4F \
             background.drawing=on \
             click_script="yabai -m space --focus $sid" \
-            background.corner_radius=8
+            background.corner_radius=9
 done
 
 SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
 SPACES=()
 
 ############## ITEM DEFAULTS ###############
-sketchybar --default label.padding_left=6 \
-      label.padding_right=6 \
-      icon.padding_left=6 \
-      icon.padding_right=6 \
-      icon.font="SF Pro Rounded:Regular:17" \
-      label.font="SF Pro Rounded:Bold:14.0" \
-      background.height=32 \
-      background.padding_right=4 \
-      background.padding_left=4 \
-      background.corner_radius=6
+sketchybar --default label.padding_left=0 \
+      label.padding_right=0 \
+      icon.padding_left=0 \
+      icon.padding_right=0 \
+      icon.font="SF Pro Rounded:Regular:13" \
+      label.font="SF Pro Rounded:Bold:8.0" \
+      background.height=18 \
+      background.padding_right=0 \
+      background.padding_left=0 \
+      background.corner_radius=9								
 
 sketchybar --add item clock_icon left \
       --set clock_icon icon=􀐬 \
@@ -62,7 +62,7 @@ sketchybar --add item clock_icon left \
       icon.padding_left=6\
       icon.color=0xff121219 \
       label.drawing=off \
-      padding_left=3 \
+      padding_left=8 \
       background.color=0xff92B3F5
 
 sketchybar --add item hour left \
